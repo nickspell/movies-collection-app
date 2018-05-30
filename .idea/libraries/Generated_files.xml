@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/src/LanguageSelector.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/App.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/FlagIcon.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/LanguageMenu.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/NavBar.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/localization/languages.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/src/LanguageSelector.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/App.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/FlagIcon.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/LanguageMenu.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/NavBar.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/localization/languages.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
