@@ -4,29 +4,56 @@ import TextField from "@material-ui/core/es/TextField/TextField";
 import { Field, reduxForm } from "redux-form";
 import '../styles/css/components/searchbar.css';
 import orange from "@material-ui/core/es/colors/orange";
-import withStyles from "@material-ui/core/es/styles/withStyles";
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { createMuiTheme } from '@material-ui/core/styles';
 import grey from "@material-ui/core/es/colors/grey";
+import InputAdornment from "@material-ui/core/es/InputAdornment/InputAdornment";
+import Button from "@material-ui/core/es/Button/Button";
 
-const styles = () => ({
-    cssLabel: {
-        '&$cssFocused': {
-            color: grey[50]
+const theme = createMuiTheme({
+    palette: {
+        primary: { main: orange[800], dark: orange[800] }, //line+label when active
+        secondary: { main: grey[50] },
+        text: {
+            primary: grey[50], //line color when hover
+            secondary: orange[800] //label color
         }
     },
-    cssFocused: {},
-    cssUnderline: {
-        '&:before': {
-            borderBottomColor: grey[50],
-            borderBottomWidth: 1
-        },
-        '&:after': {
-            borderBottomColor: orange[500],
-            borderBottomWidth: 3
-        }
-    },
-    cssLabelProps: {
-        color: grey[400],
+
+    typography: {
         fontSize: 20
+    },
+    overrides: {
+        MuiInput: {
+            root: {
+                color: grey[50]
+            },
+            underline: {
+                '&:before': {
+                    borderBottomColor: grey[50],
+                    borderBottomWidth: 1
+                },
+                '&:after': {
+                    borderBottomColor: orange[800],
+                    borderBottomWidth: 3
+                }
+            }
+        },
+        MuiButton: {
+            root: {
+                //background: "linear-gradient(90deg, #FE6B8B 30%, #FF8E53 90%)",
+                borderRadius: 10,
+                border: 0,
+                minHeight: 0,
+                minWidth: 0,
+                paddingLeft: 10,
+                paddingRight: 10,
+                paddingTop: 5,
+                paddingBottom: 5,
+                fontSize: '0.7em'
+            }
+
+        }
     }
 });
 
@@ -39,23 +66,33 @@ let SearchBar = ({ activeLanguage, filterById, classes }) => {
         React.createElement(
             'form',
             null,
-            React.createElement(Field, { name: "query", component: TextField, label: placeholder, fullWidth: true,
-                InputProps: {
-                    classes: {
-                        root: classes.cssLabel,
-                        focused: classes.cssFocused,
-                        underline: classes.cssUnderline
-                    }
-                },
-                InputLabelProps: {
-                    className: classes.cssLabelProps
-                } })
+            React.createElement(
+                MuiThemeProvider,
+                { theme: theme },
+                React.createElement(Field, { name: "query", component: TextField, label: placeholder, fullWidth: true,
+                    InputProps: {
+                        endAdornment: React.createElement(
+                            InputAdornment,
+                            { position: 'start' },
+                            React.createElement(
+                                Button,
+                                { variant: 'raised', color: filterById ? "primary" : "secondary", style: { 'margin-right': 5 } },
+                                'ID'
+                            ),
+                            React.createElement(
+                                Button,
+                                { variant: 'raised', color: filterById ? "secondary" : "primary" },
+                                'TITLE'
+                            )
+                        )
+                    } })
+            )
         )
     );
 };
-
+//TODO add button actions
 SearchBar = reduxForm({
     form: 'searchBar'
 })(SearchBar);
-export default withStyles(styles)(SearchBar);
+export default SearchBar;
 //# sourceMappingURL=SearchBar.js.map
