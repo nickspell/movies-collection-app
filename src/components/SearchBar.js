@@ -14,8 +14,7 @@ import Button from "@material-ui/core/es/Button/Button";
 
 type Props = {
     activeLanguage: string,
-    filterById: boolean,
-    classes: any
+    filterById: boolean
 }
 
 
@@ -59,7 +58,9 @@ const theme = createMuiTheme({
                 paddingRight:10,
                 paddingTop:5,
                 paddingBottom:5,
-                fontSize:'0.7em',
+                marginBottom:3,
+                fontSize:'1.1rem',
+                //textTransform:'none'
             }
 
         }
@@ -67,7 +68,7 @@ const theme = createMuiTheme({
 });
 
 
-let SearchBar = ({activeLanguage, filterById, classes}: Props) => {
+let SearchBar = ({activeLanguage, filterById}: Props) => {
     str.strings.setLanguage(activeLanguage);
     let placeholder = filterById ? str.strings.queryPlaceholderID : str.strings.queryPlaceholderTitle;
     return (
@@ -77,12 +78,12 @@ let SearchBar = ({activeLanguage, filterById, classes}: Props) => {
                     <Field name={"query"} component={TextField} label={placeholder} fullWidth={true}
                            InputProps={{
                                endAdornment:
-                                   <InputAdornment position="start">
-                                       <Button variant="raised"  color={filterById?"primary":"secondary"} style={{'margin-right':5}} >
+                                   <InputAdornment position="end">
+                                       <Button variant="raised"  color={filterById?"primary":"secondary"} style={{'marginRight':5}} >
                                            ID
                                        </Button>
                                        <Button variant="raised"  color={filterById?"secondary":"primary"}>
-                                           TITLE
+                                           {str.strings.titleButton}
                                        </Button>
                                    </InputAdornment>,
                            }}/>

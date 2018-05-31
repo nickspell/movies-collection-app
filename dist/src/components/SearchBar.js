@@ -50,14 +50,16 @@ const theme = createMuiTheme({
                 paddingRight: 10,
                 paddingTop: 5,
                 paddingBottom: 5,
-                fontSize: '0.7em'
+                marginBottom: 3,
+                fontSize: '1.1rem'
+                //textTransform:'none'
             }
 
         }
     }
 });
 
-let SearchBar = ({ activeLanguage, filterById, classes }) => {
+let SearchBar = ({ activeLanguage, filterById }) => {
     str.strings.setLanguage(activeLanguage);
     let placeholder = filterById ? str.strings.queryPlaceholderID : str.strings.queryPlaceholderTitle;
     return React.createElement(
@@ -73,16 +75,16 @@ let SearchBar = ({ activeLanguage, filterById, classes }) => {
                     InputProps: {
                         endAdornment: React.createElement(
                             InputAdornment,
-                            { position: 'start' },
+                            { position: 'end' },
                             React.createElement(
                                 Button,
-                                { variant: 'raised', color: filterById ? "primary" : "secondary", style: { 'margin-right': 5 } },
+                                { variant: 'raised', color: filterById ? "primary" : "secondary", style: { 'marginRight': 5 } },
                                 'ID'
                             ),
                             React.createElement(
                                 Button,
                                 { variant: 'raised', color: filterById ? "secondary" : "primary" },
-                                'TITLE'
+                                str.strings.titleButton
                             )
                         )
                     } })
