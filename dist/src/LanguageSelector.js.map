@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/LanguageSelector.js"],"names":["React"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,OAAlB","file":"LanguageSelector.js","sourcesContent":["import React from \"react\"\n\n\n"]}

@@ -11,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import classNames from 'classnames';
 import FlagIcon from "./FlagIcon";
-import languages from '../localization/languages'
+import * as lang from '../localization/languages'
 
 
 type Classes={
@@ -58,7 +58,7 @@ class LanguageMenu extends React.Component<Props,State>{
         this.setState({ open: !this.state.open });
     };
 
-    handleClose = (event:any) => {
+    handleClose = (event:Event) => {
         if (this.target.contains(event.target)) {
             return;
         }
@@ -70,8 +70,6 @@ class LanguageMenu extends React.Component<Props,State>{
         const {classes,activeLanguage}=this.props;
         const {open}=this.state;
         const size='lg';
-
-        console.log(typeof this.target);
         return(
             <div className={classes.root}>
                 <Manager>
@@ -100,11 +98,13 @@ class LanguageMenu extends React.Component<Props,State>{
                                 <Collapse in={open} id="menu-list-collapse" style={{ transformOrigin: '0 0 0' }}>
                                     <Paper style={{ margin: 3 }}>
                                         <MenuList role="menu">
-                                            Object.keys(languages).forEach((key: string,language : )=> {
-                                            <MenuItem onClick={this.handleClose}>
-                                                <FlagIcon code={key} size={size} /> <span>Ciao</span>
-                                            </MenuItem>
-                                        });
+                                            {Object.keys(lang.languages).map(key=> {
+                                                return(
+                                            <MenuItem key={key} onClick={(event)=>{console.log(key+' clicked');this.handleClose(event)}}> {/*TODO add dispatcher*/}
+                                                <FlagIcon code={key} size={size} />
+                                                <div style={{marginLeft:"10px"}}>{lang.languages[key].name}</div>
+                                            </MenuItem>);
+                                        })};
                                         </MenuList>
                                     </Paper>
                                 </Collapse>

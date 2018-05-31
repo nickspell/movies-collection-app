@@ -2,23 +2,32 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/dist/src/LanguageSelector.js" />
+        <item url="file://$PROJECT_DIR$/dist/build/service-worker.js" />
+        <item url="file://$PROJECT_DIR$/dist/build/static/js/main.3ccc5deb.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/src/components/LanguageMenu.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/src/index.js" />
         <item url="file://$PROJECT_DIR$/dist/src/components/App.js" />
-        <item url="file://$PROJECT_DIR$/dist/src/components/FlagIcon.js" />
-        <item url="file://$PROJECT_DIR$/dist/src/components/LanguageMenu.js" />
-        <item url="file://$PROJECT_DIR$/dist/src/components/NavBar.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/Header.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/SearchBar.js" />
         <item url="file://$PROJECT_DIR$/dist/src/index.js" />
-        <item url="file://$PROJECT_DIR$/dist/src/localization/languages.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/localization/strings.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/src/LanguageSelector.js" />
-      <root url="file://$PROJECT_DIR$/dist/src/components/App.js" />
       <root url="file://$PROJECT_DIR$/dist/src/components/FlagIcon.js" />
       <root url="file://$PROJECT_DIR$/dist/src/components/LanguageMenu.js" />
       <root url="file://$PROJECT_DIR$/dist/src/components/NavBar.js" />
-      <root url="file://$PROJECT_DIR$/dist/src/index.js" />
       <root url="file://$PROJECT_DIR$/dist/src/localization/languages.js" />
+      <root url="file://$PROJECT_DIR$/dist/build/service-worker.js" />
+      <root url="file://$PROJECT_DIR$/dist/build/static/js/main.3ccc5deb.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/src/components/LanguageMenu.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/src/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/App.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/Header.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/SearchBar.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/localization/strings.js" />
     </CLASSES>
     <SOURCES />
   </library>

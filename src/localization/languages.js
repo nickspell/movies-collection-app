@@ -1,8 +1,7 @@
-type Key
 
 
 export const languages={
-    "en":{
+    "gb":{
         name: "English",
         code:"en-US"
     },
@@ -11,7 +10,7 @@ export const languages={
         code: "it-IT"
     },
     "fr":{
-        name: "Francais",
+        name: "Français",
         code: "fr-FR"
     }
 

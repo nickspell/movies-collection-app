@@ -15,6 +15,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "classnames": "latest",
     "flag-icon-css": "^3.0.0",
     "lodash": "^4.17.10",
     "node-uuid": "^1.4.8",
@@ -22,25 +23,29 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-flag-icon-css": "^1.0.23",
+    "react-localization": "^1.0.10",
+    "react-popper": "latest",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
+    "redux-form": "^7.3.0",
+    "redux-form-material-ui": "^4.3.4",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
     "typeface-roboto": "0.0.54",
-    "webpack": "^3.11.0",
-    "classnames": "latest",
-    "react-popper": "latest"
+    "webpack": "^3.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "sass": "sass src/styles/scss:src/styles/css",
+    "sass:build": "sass - update src/styles/scss:src/styles/css"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
@@ -49,6 +54,9 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "flow-bin": "^0.73.0",
+    "node-sass": "^4.9.0",
+    "sass": "^1.4.0",
+    "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0"
   }
 }

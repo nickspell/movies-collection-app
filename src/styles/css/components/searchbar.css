@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Maven";
+  /*a name to be used later*/
+  src: url("../../../fonts/maven/MavenProLight-300.otf");
+  /*URL to font*/
+}
+@font-face {
+  font-family: "MissionScript";
+  /*a name to be used later*/
+  src: url("../../../fonts/mission-script/Mission-Script.otf");
+  /*URL to font*/
+}
+.back {
+  flex: 0 0 auto;
+  background-color: #616161;
+  display: flex;
+  min-height: 30vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 0 20px;
+  height: 10vw;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+.pretitle {
+  font-family: "MissionScript", "Helvetica", "Arial", sans-serif;
+  color: #EF6C00;
+  margin-right: 15px;
+  font-size: 4em;
+}
+
+.title {
+  font-family: "Maven", "Helvetica", "Arial", sans-serif;
+  color: #FAFAFA;
+  font-size: 2.5em;
+}
+
+.formcc {
+  width: 80vw;
+}
+
+/*# sourceMappingURL=src/styles/css/components/searchbar.css.map */
