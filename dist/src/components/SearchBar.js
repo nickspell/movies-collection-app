@@ -1,3 +1,5 @@
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 import React from 'react';
 import * as str from '../localization/strings';
 import TextField from "@material-ui/core/es/TextField/TextField";
@@ -9,17 +11,12 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import grey from "@material-ui/core/es/colors/grey";
 import InputAdornment from "@material-ui/core/es/InputAdornment/InputAdornment";
 import Button from "@material-ui/core/es/Button/Button";
+import * as pal from '../styles/palette';
 
 const theme = createMuiTheme({
-    palette: {
-        primary: { main: orange[800], dark: orange[800] }, //line+label when active
-        secondary: { main: grey[50] },
-        text: {
-            primary: grey[50], //line color when hover
-            secondary: orange[800] //label color
-        }
-    },
-
+    palette: _extends({}, pal.palette, {
+        secondary: { main: grey[300] }
+    }),
     typography: {
         fontSize: 20
     },
@@ -50,8 +47,7 @@ const theme = createMuiTheme({
                 paddingRight: 10,
                 paddingTop: 5,
                 paddingBottom: 5,
-                marginBottom: 3,
-                fontSize: '1.1rem'
+                fontSize: '0.9rem'
                 //textTransform:'none'
             }
 
@@ -59,8 +55,8 @@ const theme = createMuiTheme({
     }
 });
 
-let SearchBar = ({ activeLanguage, filterById }) => {
-    str.strings.setLanguage(activeLanguage);
+let SearchBar = ({ filterById }) => {
+
     let placeholder = filterById ? str.strings.queryPlaceholderID : str.strings.queryPlaceholderTitle;
     return React.createElement(
         'div',

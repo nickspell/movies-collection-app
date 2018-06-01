@@ -1,0 +1,24 @@
+@import '../variables';
+
+.tool{
+  background-color: white;
+  display:flex;
+  justify-content: flex-end;
+  @media only screen and (max-width: $screen-small) {
+    justify-content: space-between;
+  }
+  align-items: center;
+  width:100%;
+  position:sticky;
+  top:$appbar-height;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+
+.order{
+  margin-right:50px;
+  display:flex;
+  align-items: center;
+
+}

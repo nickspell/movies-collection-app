@@ -1,3 +1,6 @@
+
+@import '../_variables.scss';
+
 @font-face {
   font-family: 'Maven'; /*a name to be used later*/
   src: url('../../../fonts/maven/MavenProLight-300.otf'); /*URL to font*/
@@ -8,23 +11,18 @@
 }
 
 
+
 .back{
   flex:0 0 auto;
-  background-color: #616161;
+  background-color: #424242;
   display:flex;
   min-height:30vh;
   align-items:center;
   justify-content: center;
+  padding-top: $appbar-height;
 }
 
-.wrapper{
-  padding-top: 20px;
-  padding-bottom:20px;
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  //background-color: darkgreen;
-}
+
 
 .logo{
   margin:0 0 20px;
@@ -61,5 +59,5 @@
 
 .formcc{
   //background-color: lavender;
-  width:80vw;
+  width:100%;
 }

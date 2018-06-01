@@ -12,19 +12,12 @@
 }
 .back {
   flex: 0 0 auto;
-  background-color: #616161;
+  background-color: #424242;
   display: flex;
   min-height: 30vh;
   align-items: center;
   justify-content: center;
-}
-
-.wrapper {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 50px;
 }
 
 .logo {
@@ -54,7 +47,7 @@
 }
 
 .formcc {
-  width: 80vw;
+  width: 100%;
 }
 
 /*# sourceMappingURL=src/styles/css/components/searchbar.css.map */

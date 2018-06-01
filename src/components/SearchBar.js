@@ -10,24 +10,17 @@ import {createMuiTheme} from '@material-ui/core/styles';
 import grey from "@material-ui/core/es/colors/grey";
 import InputAdornment from "@material-ui/core/es/InputAdornment/InputAdornment";
 import Button from "@material-ui/core/es/Button/Button";
+import * as pal from '../styles/palette'
 
-
-type Props = {
-    activeLanguage: string,
-    filterById: boolean
+type Props={
+    filterById:boolean
 }
 
-
 const theme = createMuiTheme({
-    palette: {
-        primary: {main: orange[800], dark: orange[800]}, //line+label when active
-        secondary: {main: grey[50]},
-        text: {
-            primary: grey[50], //line color when hover
-            secondary: orange[800], //label color
-        },
+    palette:{
+        ...pal.palette,
+        secondary :{main:grey[300]}
     },
-
     typography: {
         fontSize: 20,
     },
@@ -58,8 +51,7 @@ const theme = createMuiTheme({
                 paddingRight:10,
                 paddingTop:5,
                 paddingBottom:5,
-                marginBottom:3,
-                fontSize:'1.1rem',
+                fontSize:'0.9rem',
                 //textTransform:'none'
             }
 
@@ -68,8 +60,8 @@ const theme = createMuiTheme({
 });
 
 
-let SearchBar = ({activeLanguage, filterById}: Props) => {
-    str.strings.setLanguage(activeLanguage);
+let SearchBar = ({filterById}:Props) => {
+
     let placeholder = filterById ? str.strings.queryPlaceholderID : str.strings.queryPlaceholderTitle;
     return (
         <div className={"formcc"}>

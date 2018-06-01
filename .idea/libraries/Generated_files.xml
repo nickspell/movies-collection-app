@@ -2,19 +2,41 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/src/components/AddButton.js" />
         <item url="file://$PROJECT_DIR$/dist/src/components/App.js" />
         <item url="file://$PROJECT_DIR$/dist/src/components/Header.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/LanguageMenu.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/MainPage.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/MoviesGrid.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/NavBar.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/OrderingMenu.js" />
         <item url="file://$PROJECT_DIR$/dist/src/components/SearchBar.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/components/ToolBar.js" />
         <item url="file://$PROJECT_DIR$/dist/src/index.js" />
         <item url="file://$PROJECT_DIR$/dist/src/localization/strings.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/movie.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/orderings.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/sorting.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/styles/palette.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/src/components/AddButton.js" />
       <root url="file://$PROJECT_DIR$/dist/src/components/App.js" />
       <root url="file://$PROJECT_DIR$/dist/src/components/Header.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/LanguageMenu.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/MainPage.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/MoviesGrid.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/NavBar.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/OrderingMenu.js" />
       <root url="file://$PROJECT_DIR$/dist/src/components/SearchBar.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/components/ToolBar.js" />
       <root url="file://$PROJECT_DIR$/dist/src/index.js" />
       <root url="file://$PROJECT_DIR$/dist/src/localization/strings.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/movie.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/orderings.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/sorting.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/styles/palette.js" />
     </CLASSES>
     <SOURCES />
   </library>

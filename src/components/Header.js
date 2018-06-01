@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import '../styles/css/main.css'
 import '../styles/css/components/searchbar.css'
 import logo from '../static/icons/silo.jpg'
 import SearchBar from "./SearchBar";
