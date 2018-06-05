@@ -16,7 +16,7 @@
   flex:0 0 auto;
   background-color: #424242;
   display:flex;
-  min-height:30vh;
+  min-height:20vh;
   align-items:center;
   justify-content: center;
   padding-top: $appbar-height;
@@ -33,7 +33,9 @@
 
 .title-container{
   display: flex;
+  flex-direction: row;
   align-items:center;
+  justify-content: space-evenly;
   //background-color: aqua;
   margin:0 0 40px;
 
@@ -45,6 +47,9 @@
   //background-color: antiquewhite;
   margin-right: 15px;
   font-size: 4em;
+  @media only screen and (max-width: $screen-xsmall) {
+    font-size: 3em;
+  }
   //margin-top:5px;
 }
 
@@ -55,6 +60,9 @@
   color:#FAFAFA;
   //background-color: blueviolet;
   font-size: 2.5em;
+  @media only screen and (max-width: $screen-xsmall) {
+    font-size: 2em;
+  }
 }
 
 .formcc{

@@ -5,8 +5,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import LanguageMenu from "./LanguageMenu";
 
-import '../styles/css/components/navbar.css'
-import '../styles/css/main.css'
+import '../../styles/css/components/navbar.css'
+import '../../styles/css/main.css'
 import withStyles from "@material-ui/core/es/styles/withStyles";
 import orange from "@material-ui/core/es/colors/orange";
 

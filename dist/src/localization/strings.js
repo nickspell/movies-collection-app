@@ -6,25 +6,46 @@ export const strings = new LocalizedStrings({
         queryPlaceholderTitle: "Search movie by title",
         titleButton: "Title",
         sortButton: "Sort by",
-        orderDate: "Release date",
-        duration: "Runtime"
-
+        orderDate: "Year",
+        duration: "Runtime",
+        description: "Overview",
+        showall: "Show all",
+        showless: "Show less",
+        awards: "Awards",
+        genres: "Genres",
+        resolution: "Resolution",
+        label: "Stored in"
     },
     it: {
         queryPlaceholderID: "Cerca film per ID",
         queryPlaceholderTitle: "Cerca film per titolo",
         titleButton: "Titolo",
         sortButton: "Ordina per",
-        orderDate: "Data di uscita",
-        duration: "Durata"
+        orderDate: "Anno",
+        duration: "Durata",
+        description: "Descrizione",
+        showall: "Mostra tutto",
+        showless: "Mostra meno",
+        awards: "Premi",
+        genres: "Generi",
+        resolution: "Risoluzione",
+        label: "Salvato in"
     },
     fr: {
         queryPlaceholderID: "Rechercez un film par ID",
         queryPlaceholderTitle: "Rechercez un film par titre",
         titleButton: "Titre",
         sortButton: "Trier par",
-        orderDate: "Date de sortie",
-        duration: "Durée"
+        orderDate: "Année",
+        duration: "Durée",
+        description: "Synopsis",
+        showall: "Affiche tous",
+        showless: 'Affiche moins',
+        awards: "Prix",
+        genres: "Genres",
+        resolution: "Résolution",
+        label: "Stocké dans"
+
     }
 
 });

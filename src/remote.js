@@ -1,0 +1,1 @@
+export const BASE_PATH_TMDB="https://image.tmdb.org/t/p/";

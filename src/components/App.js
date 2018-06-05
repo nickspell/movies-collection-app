@@ -1,18 +1,18 @@
+// @flow
 import React, { Component } from 'react';
-import NavBar from "./NavBar";
-import Header from "./Header";
-import MainPage from "./MainPage";
+import NavBar from "./navbar/NavBar";
+import GridPage from "./gridpage/GridPage";
+import {Route, Switch} from "react-router-dom";
+import DetailPage from "./detailpage/DetailPage";
 
-class App extends Component {
-  render() {
-    return (
+
+const App =()=>
       <div>
           <NavBar/>
-          <Header/>
-          <MainPage/>
-      </div>
-    );
-  }
-}
+          <Switch>
+              <Route exact path='/' component={GridPage}/>
+              <Route path="/movie/:id" component={DetailPage}/>
+          </Switch>
+      </div>;
 
 export default App;

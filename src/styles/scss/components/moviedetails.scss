@@ -1,0 +1,231 @@
+@import '../_variables';
+
+
+.detail{
+  flex-direction: row;
+  @media only screen and (max-width: $screen-xsmall) {
+    flex-direction: column;
+  }
+  padding-top: $appbar-height+20;
+  align-items: flex-start;
+  @media only screen and (max-width: $screen-small) {
+    align-items: center;
+  }
+  justify-content: center;
+}
+
+//.background{
+//  height:50vw;
+//  background-size: 100vw auto;
+//  background-repeat: no-repeat;
+//  @media only screen and (min-width: $screen-small) {
+//    max-height:55vh;
+//
+//  }
+//}
+
+.backm{
+  flex:0 0 auto;
+  //background-color: #0000ff;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Roboto", "Helvetica","Arial",sans-serif;
+}
+
+
+.megaposter{
+  flex:2;
+  @media only screen and (max-width: $screen-xsmall) {
+    width:50vw;
+  }
+  display: flex;
+}
+
+.megadetails{
+  flex:5;
+}
+
+.supertitle{
+  font-size:2em;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1.5em;
+  }
+  font-family: "Roboto", "Helvetica","Arial",sans-serif;
+  color: #FAFAFA;
+  width:90%;
+  //background-color: #EF6C00;
+}
+
+.catchy{
+  font-size:1.5em;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1.2em;
+  }
+  font-style: italic;
+  color:#BDBDBD;
+  @media only screen and (min-width: $screen-small) {
+    margin-bottom: 20px;
+  }
+}
+
+.reldur{
+  padding-top: 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.titolino{
+  font-size:1.5em;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1.2em;
+  }
+  color: #EF6C00;
+  @media only screen and (max-width: $screen-xsmall) {
+    flex:0;
+  }
+}
+
+.rispostina{
+  font-size:1.4em;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1em;
+  }
+  color: #FAFAFA;
+
+}
+
+.rel{
+  margin-right:20px;
+  @media only screen and (max-width: $screen-medium) {
+    margin-right: 5px;
+  }
+}
+
+.scores{
+  padding-top: 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @media only screen and (max-width: $screen-xsmall) {
+    justify-content: space-between;
+  }
+  align-items: center;
+
+  height:80px;
+  @media only screen and (max-width: $screen-small) {
+    width:95vw;
+  }
+}
+.rt{
+  width:60px;
+  margin-top: 7px;
+  margin-left:8px;
+  margin-right:20px;
+  @media only screen and (min-width:$screen-small) and (max-width: $screen-medium) {
+    margin-left:3px;
+    margin-right: 7px;
+  }
+  @media only screen and (max-width: $screen-medium) {
+    margin-right: 15px;
+  }
+
+}
+
+.descr{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color:#FAFAFA;
+  @media only screen and (max-width: $screen-small) {
+    color:#424242;
+  }
+  @media only screen and (max-width: $screen-small) {
+    width:95vw;
+  }
+}
+.expand{
+  color: #EF6C00;
+}
+
+.rispostinaina{
+  font-size:1.2em;
+  color: #FAFAFA;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1em;
+  }
+  @media only screen and (max-width: $screen-small) {
+    color:#424242;
+  }
+}
+
+.prizesdetail{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  @media only screen and (max-width: $screen-small) {
+    width:95vw;
+  }
+}
+
+.rispostinainaina{
+  font-size:1em;
+  color:#BDBDBD;
+  @media only screen and (max-width: $screen-small) {
+    color:#424242;
+  }
+  font-style:italic;
+}
+
+.smallinfo {
+  font-size: 1.2em;
+  color: #FAFAFA;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1em;
+  }
+  @media only screen and (max-width: $screen-small) {
+    color: #424242;
+  }
+}
+
+.smallinfotag{
+  font-size: 1.2em;
+  color: #EF6C00;
+  @media only screen and (max-width: $screen-medium) {
+    font-size: 1em;
+  }
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.additionalwrapper {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: $screen-small) {
+    width: 95vw;
+  }
+}
+.trailer {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+.trailer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

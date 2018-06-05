@@ -14,7 +14,7 @@
   flex: 0 0 auto;
   background-color: #424242;
   display: flex;
-  min-height: 30vh;
+  min-height: 20vh;
   align-items: center;
   justify-content: center;
   padding-top: 50px;
@@ -29,7 +29,9 @@
 
 .title-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0 0 40px;
 }
 
@@ -39,11 +41,21 @@
   margin-right: 15px;
   font-size: 4em;
 }
+@media only screen and (max-width: 480px) {
+  .pretitle {
+    font-size: 3em;
+  }
+}
 
 .title {
   font-family: "Maven", "Helvetica", "Arial", sans-serif;
   color: #FAFAFA;
   font-size: 2.5em;
+}
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 2em;
+  }
 }
 
 .formcc {

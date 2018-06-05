@@ -13,6 +13,10 @@ import InputAdornment from "@material-ui/core/es/InputAdornment/InputAdornment";
 import Button from "@material-ui/core/es/Button/Button";
 import * as pal from '../styles/palette';
 
+const breakpoint = {
+    xs: 400
+};
+
 const theme = createMuiTheme({
     palette: _extends({}, pal.palette, {
         secondary: { main: grey[300] }
@@ -83,7 +87,8 @@ let SearchBar = ({ filterById }) => {
                                 str.strings.titleButton
                             )
                         )
-                    } })
+                    }
+                })
             )
         )
     );

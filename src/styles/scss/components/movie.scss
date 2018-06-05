@@ -1,0 +1,72 @@
+
+.emptycard {
+  height: 0;
+  width: 250px;
+}
+
+.movieinfo {
+  height: 300px;
+  width: 50px;
+  //background-color: royalblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //  justify-content:center;
+}
+
+.info {
+  flex-grow: 1
+}
+
+.score {
+  padding: 3px;
+  margin-top: 10px;
+  flex:0;
+}
+.score2{
+  padding: 3px;
+  flex:0;
+}
+
+
+
+.prizes {
+  margin-top: 10px;
+  display: flex;
+  flex-grow:4;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.gen {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #9E9E9E;
+  font-size:1em;
+}
+
+.id {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #EF6C00;
+  font-size:1.3em;
+}
+
+
+.floatingbuttons{
+  position: absolute;
+  //background-color: royalblue;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  height:100px;
+  width: 50px;
+  align-items:center;
+}
+
+div.overlay {
+  opacity: .5;
+  background-color: black;
+  position: absolute;
+  height: 300px; width: 200px;
+}
+

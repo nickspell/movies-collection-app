@@ -11,8 +11,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import classNames from 'classnames';
 import FlagIcon from "./FlagIcon";
-import * as lang from '../localization/languages'
-import * as str from '../localization/strings'
+import * as lang from '../../localization/languages'
+import * as str from '../../localization/strings'
 
 
 type Classes={
@@ -62,7 +62,6 @@ class LanguageMenu extends React.Component<Props,State>{
         if (this.target.contains(event.target)) {
             return;
         }
-
         this.setState({ open: false });
     };
 
@@ -93,10 +92,11 @@ class LanguageMenu extends React.Component<Props,State>{
                             placement="bottom"
                             eventsEnabled={open}
                             className={classNames({ [classes.popperClose]: !open })}
+                            style={{zIndex:2000}}
                         >
                             <ClickAwayListener onClickAway={this.handleClose}>
-                                <Collapse in={open} id="menu-list-collapse" style={{ transformOrigin: '0 0 0' }}>
-                                    <Paper style={{ margin: 3 }}>
+                                <Collapse in={open} id="menu-list-collapse" style={{ transformOrigin: '0 0 0'}}>
+                                    <Paper style={{ margin: 3}}>
                                         <MenuList role="menu">
                                             {Object.keys(lang.languages).map(key=> {
                                                 return(

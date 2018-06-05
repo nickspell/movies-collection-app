@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react'
-import * as str from "../localization/strings";
+import * as str from "../../../../localization/strings";
 import {Manager, Target, Popper} from 'react-popper';
 import Button from "@material-ui/core/es/Button/Button";
 import {createMuiTheme, withStyles} from "@material-ui/core/styles/index";
@@ -8,7 +10,7 @@ import Paper from "@material-ui/core/es/Paper/Paper";
 import MenuList from "@material-ui/core/es/MenuList/MenuList";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import classNames from 'classnames';
-import * as pal from "../styles/palette";
+import * as pal from "../../../../styles/palette";
 import grey from "@material-ui/core/es/colors/grey";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Grow from "@material-ui/core/es/Grow/Grow";

@@ -1,20 +1,24 @@
 // @flow
 import React from 'react';
-import * as str from '../localization/strings'
+import * as str from '../../../localization/strings'
 import TextField from "@material-ui/core/es/TextField/TextField";
 import {Field, reduxForm} from "redux-form";
-import '../styles/css/components/searchbar.css'
+import '../../../styles/css/components/searchbar.css'
 import orange from "@material-ui/core/es/colors/orange";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import {createMuiTheme} from '@material-ui/core/styles';
 import grey from "@material-ui/core/es/colors/grey";
 import InputAdornment from "@material-ui/core/es/InputAdornment/InputAdornment";
 import Button from "@material-ui/core/es/Button/Button";
-import * as pal from '../styles/palette'
+import * as pal from '../../../styles/palette'
 
 type Props={
     filterById:boolean
 }
+
+const breakpoint={
+    xs:400
+};
 
 const theme = createMuiTheme({
     palette:{
@@ -78,7 +82,8 @@ let SearchBar = ({filterById}:Props) => {
                                            {str.strings.titleButton}
                                        </Button>
                                    </InputAdornment>,
-                           }}/>
+                           }}
+                        />
                 </MuiThemeProvider>
             </form>
         </div>

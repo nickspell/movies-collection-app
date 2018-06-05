@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import NavBar from "./NavBar";
-import Header from "./Header";
-import MainPage from "./MainPage";
+import NavBar from "./navbar/NavBar";
+import GridPage from "./gridpage/GridPage";
+import { Route, Switch } from "react-router-dom";
+import DetailPage from "./detailpage/DetailPage";
 
-class App extends Component {
-  render() {
-    return React.createElement(
-      "div",
-      null,
-      React.createElement(NavBar, null),
-      React.createElement(Header, null),
-      React.createElement(MainPage, null)
-    );
-  }
-}
+const App = () => React.createElement(
+    "div",
+    null,
+    React.createElement(NavBar, null),
+    React.createElement(
+        Switch,
+        null,
+        React.createElement(Route, { exact: true, path: "/", component: GridPage }),
+        React.createElement(Route, { path: "/movie/:id", component: DetailPage })
+    )
+);
 
 export default App;
 //# sourceMappingURL=App.js.map
