@@ -29,16 +29,12 @@ import * as db from '../../../../remote'
 import * as str from "../../../../localization/strings";
 
 type Classes = {
-    root: {
-        backgroundColor: string,
-        height: number,
-        width: number
-    },
+    root:{[string]:string},
 }
 
 type Movie = {
     id: number, //
-    title:string,
+    title:{[string]:string},
     poster: string,
     rtscore: number,//
     audscore: number,//
@@ -93,8 +89,7 @@ class MovieCard extends React.Component<Props, State> {
         open: false,
         dark:false
     };
-    target: any;
-    target_float:any;
+
 
     handleOpen = () => {
         this.setState({open: true});

@@ -23,13 +23,8 @@ const path_descending = 'M1216 1568v192q0 14-9 23t-23 9h-256q-14 0-23-9t-9-23v-1
 
 
 type Classes = {
-    root: {
-        display: string
-    },
-    paper: {
-        marginRight: number
-    },
-    popperClose: any
+    paper: {[string]:string},
+    popperClose:any
 }
 
 type Props = {

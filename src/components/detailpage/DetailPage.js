@@ -19,16 +19,12 @@ import DetailGenres from "./DetailGenres";
 import DetailTrailer from "./DetailTrailer";
 import DetailPersonalInfo from "./DetailPersonalInfo";
 import * as str from "../../localization/strings";
+import {Redirect} from "react-router-dom";
 
 
 type Classes = {
-    root: {
-        backgroundColor: string,
-        height: number,
-        width: number,
-        display: string,
-        flexDirection: string
-    }
+    root: {[string]:string},
+    rootSmall: {[string]:string},
 }
 
 type Props = {
@@ -90,7 +86,7 @@ const styles = () => ({
 
 type Movie = {
     id: number, //
-    title: string,
+    title: {[string]:string},
     poster: string,
     rtscore: number,//
     audscore: number,//
@@ -103,9 +99,9 @@ type Movie = {
     resolution: string,
     hd: string,
     trailer: string,
-    catchy:string,
-    description:string,
-    genres:[string],
+    catchy:{[string]:string},
+    description:{[string]:string},
+    genres:{[string]:[string]},
     useTMDB:boolean
 };
 
@@ -137,6 +133,11 @@ const AdditionalContent = ({movie,color}: { movie: Movie,color:string }) => {
 
 const DetailPage = ({match, classes}: Props) => {
     const movie = movies[match.params.id];
+    if(!movie){
+        return(
+            <Redirect to={"/err"}/>
+        );
+    }
     const lang=str.strings.getLanguage();
     const posterurl=movie.useTMDB?(db.BASE_PATH_TMDB + 'original/' + movie.poster): movie.poster;
     return (

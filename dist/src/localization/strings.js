@@ -14,7 +14,10 @@ export const strings = new LocalizedStrings({
         awards: "Awards",
         genres: "Genres",
         resolution: "Resolution",
-        label: "Stored in"
+        label: "Stored in",
+        err404: "Page not found",
+        add: "Add new movie",
+        edit: "Edit movie"
     },
     it: {
         queryPlaceholderID: "Cerca film per ID",
@@ -29,7 +32,10 @@ export const strings = new LocalizedStrings({
         awards: "Premi",
         genres: "Generi",
         resolution: "Risoluzione",
-        label: "Salvato in"
+        label: "Salvato in",
+        err404: "Pagina non trovata",
+        add: "Aggiungi nuovo film",
+        edit: "Modifica film"
     },
     fr: {
         queryPlaceholderID: "Rechercez un film par ID",
@@ -44,7 +50,10 @@ export const strings = new LocalizedStrings({
         awards: "Prix",
         genres: "Genres",
         resolution: "Résolution",
-        label: "Stocké dans"
+        label: "Stocké dans",
+        err404: "Page non trouvée",
+        add: "Ajouter nouveau film",
+        edit: "Editer film"
 
     }
 

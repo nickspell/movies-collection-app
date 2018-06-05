@@ -16,12 +16,8 @@ import * as str from '../../localization/strings'
 
 
 type Classes={
-    root:{
-        display:string
-    },
-    paper:{
-        marginRight: number
-    },
+    root:{[string]:string},
+    paper:{[string]:string},
     popperClose:any
 }
 
