@@ -19,6 +19,8 @@ export const strings = new LocalizedStrings({
             err404:"Page not found",
             add:"Add new movie",
             edit:"Edit movie",
+            tmdbSuggestion:"Select TMDB suggestions for automatic form filling",
+            submit:"Submit"
         },
         it: {
             queryPlaceholderID: "Cerca film per ID",
@@ -37,6 +39,8 @@ export const strings = new LocalizedStrings({
             err404:"Pagina non trovata",
             add:"Aggiungi nuovo film",
             edit:"Modifica film",
+            tmdbSuggestion:"Seleziona suggerimenti di TMDB per il riempimento automatico",
+            submit:"Invia"
         },
         fr: {
             queryPlaceholderID: "Rechercez un film par ID",
@@ -54,8 +58,9 @@ export const strings = new LocalizedStrings({
             label:"Stocké dans",
             err404:"Page non trouvée",
             add:"Ajouter nouveau film",
-            edit:"Editer film"
-
+            edit:"Editer film",
+            tmdbSuggestion:"Selectionez les suggestions TMDB pour le remplissage automatique",
+            submit:"Soumettre"
         }
 
     }

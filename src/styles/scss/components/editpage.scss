@@ -4,12 +4,12 @@
   padding-top: $appbar-height+20px;
   display: flex;
   flex-direction:column;
-  align-items:flex-start;
   max-width: 1000px;
   width:70vw;
   @media only screen and (max-width: $screen-small) {
     width: 100vw;
   }
+
   //background-color: darkgreen;
 }
 
@@ -22,4 +22,47 @@
   color: #EF6C00;
   width:90%;
   //background-color: #EF6C00;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+}
+
+.year{
+   max-width: 200px;
+   margin-right:20px;
+   @media only screen and (max-width: $screen-xsmall){
+     margin-right:0;
+   }
+ }
+
+.prizesx{
+  display: flex;
+  max-width: 50px;
+  margin-left:20px;
+}
+.prizesn{
+  display: flex;
+  max-width: 80px;
+  margin-left:20px;
+}
+
+.inline{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: $screen-xsmall){
+    flex-direction: column;
+  }
+  justify-content: flex-start;
+}
+
+.inline2{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
 }

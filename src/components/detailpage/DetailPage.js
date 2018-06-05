@@ -65,7 +65,7 @@ const movies = {
 const styles = () => ({
     root: {
         backgroundColor: grey[800],
-        width: '100% - 30px',
+        //width: '100% - 30px',
         marginLeft: 30,
         display: 'flex',
         flexDirection: 'column',
@@ -74,7 +74,7 @@ const styles = () => ({
     },
     rootSmall: {
         backgroundColor: grey[800],
-        width: '100% - 20px',
+        //width: '100% - 20px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

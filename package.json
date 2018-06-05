@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^1.1.0",
     "@material-ui/icons": "^1.1.0",
+    "@types/jquery": "^3.3.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -16,9 +17,12 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "bloodhound-js": "^1.2.2",
     "classnames": "latest",
+    "es6-promise": "^4.2.4",
     "flag-icon-css": "^3.0.0",
     "lodash": "^4.17.10",
+    "material-ui-chip-input": "^1.0.0-beta.5",
     "node-uuid": "^1.4.8",
     "normalizr": "^3.2.4",
     "react": "^16.4.0",
@@ -45,8 +49,11 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
+    "typeahead": "^0.2.2",
     "typeface-roboto": "0.0.54",
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "whatwg-fetch": "^2.0.4",
+    "jquery": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
