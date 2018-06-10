@@ -94,7 +94,7 @@ const AdditionalContent = ({movie,color,lang,strings}: { movie: Movie,color:stri
                 <DetailOverview strings={strings} description={movie.description[lang]?movie.description[lang]:movie.description['def']}/>
                 <DetailPrizes awardsT={strings.awards} {...movie}/>
                 <DetailGenres genresT={strings.genres} genres={movie.genres[lang]?movie.genres[lang]:movie.genres['def']}/>
-                {movie.trailer?<DetailTrailer trailer={movie.trailer[lang]?movie.trailer[lang]:movie.trailer['def']}/>:''}
+                {(movie.trailer && movie.trailer['def'].length)?<DetailTrailer trailer={movie.trailer[lang]?movie.trailer[lang]:movie.trailer['def']}/>:''}
                 <DetailPersonalInfo strings={strings} resolution={movie.resolution} hd={movie.hd}/>
             </div>
         )

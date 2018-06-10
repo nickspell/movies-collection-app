@@ -237,7 +237,7 @@ class AddEditPage extends React.Component<Props>{
             }
 
             //need to compute new id
-            const sortedids=this.props.ids.sort();
+            const sortedids=this.props.ids.sort((a,b)=>parseInt(a,10)>parseInt(b,10));
             let idtoput=-1;
             let x;
             for(x=0;x<sortedids.length;x++){
