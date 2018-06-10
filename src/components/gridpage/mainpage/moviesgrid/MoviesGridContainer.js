@@ -64,18 +64,18 @@ const getFilteredMovies = (movies, queryState, filterType, activeLanguage) => {
 
 const getSortedMovies = (movies, sortBy, order, activeLanguage) => {
     if (sortBy === 'title') {
-        movies.sort((moviea, movieb) => {
+        return movies.slice().sort((moviea, movieb) => {
             const tocompa = moviea[sortBy][activeLanguage] ? moviea[sortBy][activeLanguage] : moviea[sortBy]['def'];
             const tocompb = movieb[sortBy][activeLanguage] ? movieb[sortBy][activeLanguage] : movieb[sortBy]['def'];
-            return order ? tocompa > tocompb : tocompb > tocompa;
+            console.log(tocompa,tocompb,order ? tocompa > tocompb : tocompb > tocompa);
+            return order ? (tocompa > tocompb?1:-1 ): (tocompb > tocompa?1:-1);
         })
     } else {
-        movies.sort((moviea, movieb) => {
-            return order ? moviea[sortBy] > movieb[sortBy] : moviea[sortBy] < movieb[sortBy];
+        return movies.slice().sort((moviea, movieb) => {
+            return order ? (parseInt(moviea[sortBy],10) - parseInt(movieb[sortBy],10)) :
+                (parseInt(moviea[sortBy],10) - parseInt(movieb[sortBy],10));
         })
     }
-    return movies;
-
 };
 
 
