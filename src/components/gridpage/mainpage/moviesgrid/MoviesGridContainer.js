@@ -67,7 +67,6 @@ const getSortedMovies = (movies, sortBy, order, activeLanguage) => {
         return movies.slice().sort((moviea, movieb) => {
             const tocompa = moviea[sortBy][activeLanguage] ? moviea[sortBy][activeLanguage] : moviea[sortBy]['def'];
             const tocompb = movieb[sortBy][activeLanguage] ? movieb[sortBy][activeLanguage] : movieb[sortBy]['def'];
-            console.log(tocompa,tocompb,order ? tocompa > tocompb : tocompb > tocompa);
             return order ? (tocompa > tocompb?1:-1 ): (tocompb > tocompa?1:-1);
         })
     } else {
