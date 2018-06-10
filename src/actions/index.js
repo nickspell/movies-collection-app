@@ -20,6 +20,7 @@ export const ADD_MOVIE_SUCCESS='ADD_MOVIE_SUCCESS';
 export const ADD_MOVIE_FAILURE='ADD_MOVIE_FAILURE';
 export const EDIT_MOVIE_SUCCESS='EDIT_MOVIE_SUCCESS';
 export const EDIT_MOVIE_FAILURE='EDIT_MOVIE_FAILURE';
+export const RESET_DONE='RESET_DONE';
 
 
 
@@ -293,6 +294,14 @@ export const editMovie=(id,movie)=>(dispatch)=>{
                 dispatch(editMovieFailure("Unknown error"));
             }
 
+        }
+    )
+};
+
+export const resetDone=()=>(dispatch)=>{
+    dispatch(
+        {
+            type:RESET_DONE
         }
     )
 };

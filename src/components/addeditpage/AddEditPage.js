@@ -318,7 +318,7 @@ class AddEditPage extends React.Component<Props>{
                                 <ConfirmDialog open={this.props.done} text={
                                     this.props.errorMessage?strings.error:
                                         strings.success
-                                }/>
+                                } onClick={this.props.resetDone}/>
                                 <Field name={"title"}
                                        component={renderTextField}
                                        label={strings.titleButton}

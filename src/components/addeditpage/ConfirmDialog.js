@@ -5,8 +5,9 @@ import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import Button from "@material-ui/core/es/Button/Button";
 import {Link} from "react-router-dom";
+import {withRouter} from "react-router";
 
-const ConfimDialog=({open,text})=>{
+const ConfimDialog=withRouter(({open,text,onClick,history})=>{
     return(
         <Dialog open={open}>
             <DialogContent>
@@ -14,15 +15,15 @@ const ConfimDialog=({open,text})=>{
                     {text}
                 </DialogContentText>
                 <DialogActions>
-                    <Link to={"/"} style={{ textDecoration: 'none' }}>
-                        <Button variant="raised" color="primary">
+                        <Button variant="raised" color="primary" onClick={()=>{onClick();history.push("/")}}>
                             OK
                         </Button>
-                    </Link>
                 </DialogActions>
             </DialogContent>
         </Dialog>
     )
-};
+});
+
+
 
 export default ConfimDialog;
