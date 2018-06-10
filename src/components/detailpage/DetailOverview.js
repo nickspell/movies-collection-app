@@ -1,15 +1,14 @@
 // @flow
 import React from 'react'
-import * as str from "../../localization/strings";
 import Description from "./Description";
 
-const DetailOverview=({description}:{description:string})=>{
+const DetailOverview=(props:{description:string,strings:{[string]:string}})=>{
     return(
         <div>
             <div>
-                <span className={'titolino'}>{str.strings.description}</span>
+                <span className={'titolino'}>{props.strings.description}</span>
             </div>
-            <Description description={description}/>
+            <Description {...props} />
         </div>
     );
 };

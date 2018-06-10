@@ -54,7 +54,6 @@
   }
   font-family: "Roboto", "Helvetica","Arial",sans-serif;
   color: #FAFAFA;
-  width:90%;
   //background-color: #EF6C00;
 }
 
@@ -138,7 +137,7 @@
 .descr{
   display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   color:#FAFAFA;
   @media only screen and (max-width: $screen-small) {
     color:#424242;

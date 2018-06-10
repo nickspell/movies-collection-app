@@ -1,23 +1,22 @@
 // @flow
 import React from 'react'
-import * as str from "../../localization/strings";
 
 const getFormatDuration = (duration: number) => {
-    const hours = parseInt(duration / 60);
+    const hours = parseInt(duration / 60,10);
     const minutes = duration - hours * 60;
     return `${hours}h${minutes}`
 };
 
-const DetailInfo=({date,duration}:{date:number,duration:number})=>{
+const DetailInfo=({date,duration,dateT,durationT}:{date:number,duration:number,dateT:string,durationT:string})=>{
     return(
         <div className={"reldur"}>
             <div className={"rel"}>
-                <span className={'titolino'}>{str.strings.orderDate + ':'}</span>
+                <span className={'titolino'}>{dateT + ':'}</span>
                 &nbsp;
                 <span className={'rispostina'}>{date}</span>
             </div>
             <div className={"dur"}>
-                <span className={'titolino'}>{str.strings.duration + ':'}</span>
+                <span className={'titolino'}>{durationT + ':'}</span>
                 &nbsp;
                 <span className={'rispostina'}>{getFormatDuration(duration)}</span>
             </div>

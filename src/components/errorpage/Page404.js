@@ -1,16 +1,15 @@
 import React from 'react'
 import '../../styles/css/components/error.css'
-import * as str from '../../localization/strings'
-import Cazzo from "./Cazzo";
+import IntegrationAutosuggestContainer from "../addeditpage/IntegrationAutosuggestContainer";
 
-const Page404 =()=>{
+const Page404 =({strings}:{strings:{[string]:string}})=>{
     return(
         <div className={'backm'}>
             <div className={'error'}>
                 <div><span className={'text404'}>404</span></div>
-                <div><span className={'texterr'}>{str.strings.err404}</span></div>
+                <div><span className={'texterr'}>{strings.err404}</span></div>
             </div>
-            <Cazzo/>
+            <IntegrationAutosuggestContainer/>
         </div>
 
     );

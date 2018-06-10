@@ -3,15 +3,15 @@
 export const languages={
     "gb":{
         name: "English",
-        code:"en-US"
+        code:"en"
     },
     "it":{
         name: "Italiano",
-        code: "it-IT"
+        code: "it"
     },
     "fr":{
         name: "Français",
-        code: "fr-FR"
+        code: "fr"
     }
 
 };

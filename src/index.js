@@ -2,21 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import './styles/css/main.css';
-import {createStore} from "redux";
 import {Provider} from "react-redux";
-import * as str from './localization/strings'
 import {BrowserRouter} from "react-router-dom";
+import {configureStore, getPersistor} from "./configureStore";
+import {PersistGate} from "redux-persist/es/integration/react";
 
-const store=createStore(state=>state);
 
+const store=configureStore();
+const persistor=getPersistor(store);
 
-str.strings.setLanguage("gb");
+//str.strings.setLanguage("it");
+
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
+        <PersistGate loading={null} persistor={persistor}>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </PersistGate>
     </Provider>
     , document.getElementById('root'));
 

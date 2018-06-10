@@ -3,15 +3,12 @@
 import React from 'react'
 import LazyLoad from 'react-lazyload'
 import Placeholder from "./Placeholder";
-import Card from "@material-ui/core/es/Card/Card";
-import CardContent from "@material-ui/core/es/CardContent/CardContent";
 import grey from "@material-ui/core/es/colors/grey";
 import '../../../../styles/css/components/movie.css'
 import Paper from "@material-ui/core/es/Paper/Paper";
 import {withStyles} from '@material-ui/core/styles';
 import CircularProgressbar from 'react-circular-progressbar';
 import "react-circular-progressbar/dist/styles.css";
-import orange from "@material-ui/core/es/colors/orange";
 import green from "@material-ui/core/es/colors/green";
 import yellow from "@material-ui/core/es/colors/yellow";
 import deepOrange from "@material-ui/core/es/colors/deepOrange";
@@ -23,17 +20,15 @@ import * as pal from "../../../../styles/palette";
 import {createMuiTheme} from "@material-ui/core/styles/index";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Target from "react-popper/lib/Target";
 import {Link} from "react-router-dom";
 import * as db from '../../../../remote'
-import * as str from "../../../../localization/strings";
 
 type Classes = {
     root:{[string]:string},
 }
 
 type Movie = {
-    id: number, //
+    mvid: number, //
     title:{[string]:string},
     poster: string,
     rtscore: number,//
@@ -108,19 +103,21 @@ class MovieCard extends React.Component<Props, State> {
     };
 
     render() {
-        const {movie, classes} = this.props;
-        const lang=str.strings.getLanguage();
-        const posterurl=movie.useTMDB?(db.BASE_PATH_TMDB + 'w500/' + movie.poster): movie.poster;
+        const {movie, classes,activeLanguage} = this.props;
+        const poster=movie.poster[activeLanguage]?movie.poster[activeLanguage]:movie.poster['def'];
+        const posterurl=movie.useTMDB?(db.BASE_PATH_TMDB + 'w500/' + poster): poster;
         return (
             <div onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}>
             {this.state.open ?
                 <MuiThemeProvider theme={theme}>
                     {this.state.dark?<div className={"overlay"}/>:null}
                     <div className={"floatingbuttons"} onMouseEnter={this.handleDark} onMouseLeave={this.handleBright}>
-                        <Button mini variant="fab" color="primary" aria-label="edit">
-                            <Icon>edit_icon</Icon>
-                        </Button>
-                        <Button mini variant="fab" color="primary" aria-label="edit">
+                        <Link to={"/add/"+movie.id} style={{ textDecoration: 'none' }}>
+                            <Button mini variant="fab" color="primary" aria-label="edit">
+                                <Icon>edit_icon</Icon>
+                            </Button>
+                        </Link>
+                        <Button onClick={()=>this.props.deleteMovie(movie.id)} mini variant="fab" color="primary" aria-label="edit">
                             <DeleteIcon/>
                         </Button>
                     </div>
@@ -130,11 +127,11 @@ class MovieCard extends React.Component<Props, State> {
 
                 <div>
 
-                    <Link to='/' style={{ textDecoration: 'none' }}>
+                    <Link to={"/movie/"+movie.id} style={{ textDecoration: 'none' }}>
 
                     <Paper classes={{root: classes.root}} elevation={10}>
 
-                        <img src={posterurl} height={300} width={200} alt={movie.useTMDB?movie.title[lang]:movie.title['def']}/>
+                        <img src={posterurl} height={300} width={200} alt={movie.title['def']}/>
                         <div className={"movieinfo"}>
                             <div className={"info score"}>
                                 <CircularProgressbar
@@ -162,10 +159,10 @@ class MovieCard extends React.Component<Props, State> {
                             </div>
                             <div className={"info prizes"}>
                                 {movie.nwoscars > 0 ?
-                                    <div><img src={oscar} height={40}/></div>
+                                    <div><img alt='oscar' src={oscar} height={40}/></div>
                                     : ''}
                                 {movie.nwglobes > 0 ?
-                                    <div><img src={globe} height={40}/></div>
+                                    <div><img alt='globe' src={globe} height={40}/></div>
                                     : ''}
                             </div>
                             <div className={"info gen"}>
@@ -175,7 +172,7 @@ class MovieCard extends React.Component<Props, State> {
                                 {movie.date}
                             </div>
                             <div className={"info id"}>
-                                {movie.id}
+                                {movie.mvid}
                             </div>
                         </div>
 

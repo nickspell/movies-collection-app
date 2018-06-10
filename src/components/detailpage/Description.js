@@ -3,15 +3,14 @@ import React from 'react';
 import Collapse from "@material-ui/core/es/Collapse/Collapse";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import '../../styles/css/components/moviedetails.css'
-import grey from "@material-ui/core/es/colors/grey";
-import * as str from '../../localization/strings';
 import Button from "@material-ui/core/es/Button/Button";
 import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
 import {createMuiTheme} from "@material-ui/core/styles/index";
-import orange from "@material-ui/core/es/colors/orange";
+
 
 type Props={
-    description:string
+    description:string,
+    strings:{[string]:string}
 };
 
 type State={
@@ -74,7 +73,7 @@ class Description extends React.Component<Props,State>{
                 {this.state.height>60?<div className={'expand'}>
                     <MuiThemeProvider theme={theme}>
                         <Button color="inherit" onClick={this.handleOpenToggle}>
-                            {this.state.open?str.strings.showless:str.strings.showall}
+                            {this.state.open?this.props.strings.showless:this.props.strings.showall}
                         </Button>
                     </MuiThemeProvider>
                 </div>:''}

@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react'
-import * as str from "../../../../localization/strings";
 import {Manager, Target, Popper} from 'react-popper';
 import Button from "@material-ui/core/es/Button/Button";
 import {createMuiTheme, withStyles} from "@material-ui/core/styles/index";
@@ -30,7 +29,8 @@ type Classes = {
 type Props = {
     classes: Classes,
     selectedSort: string,
-    ascending: boolean
+    ascending: boolean,
+    strings:{[string]:string}
 };
 
 type State = {
@@ -117,24 +117,24 @@ class OrderingMenu extends React.Component<Props, State> {
     };
 
     render() {
-        const {classes, selectedSort, ascending} = this.props;
+        const {classes, selectedSort, ascending,strings, onChangeSortType,onToggleOrder} = this.props;
         const {open} = this.state;
         let sortBy = {
-            id: {
-                paramName: 'id',
+            mvid: {
+                paramName: 'mvid',
                 longName: 'ID'
             },
             title: {
                 paramName: 'title',
-                longName: str.strings.titleButton
+                longName: strings.titleButton
             },
             duration: {
                 paramName: 'duration',
-                longName: str.strings.duration
+                longName: strings.duration
             },
             date: {
                 paramName: 'date',
-                longName: str.strings.orderDate
+                longName: strings.orderDate
             },
             rtscore: {
                 paramName: 'rtscore',
@@ -152,7 +152,7 @@ class OrderingMenu extends React.Component<Props, State> {
                 <MuiThemeProvider theme={themeIcon}>
                     <Button variant={"raised"}
                             color={"secondary"} onClick={() => {
-                        console.log('order toggle');
+                        onToggleOrder();
                     }} style={{marginRight:5}}>
                         <SvgIcon color={"primary"} viewBox={"0 0 1792 1792"} style={{transform:"scale(0.7)"}}>
                             <path d={ascending ? path_ascending : path_descending}/>
@@ -174,7 +174,7 @@ class OrderingMenu extends React.Component<Props, State> {
                                     aria-haspopup="true"
                                     onClick={this.handleToggle}
                                 >
-                                    {str.strings.sortButton}
+                                    {strings.sortButton}
                                 </Button>
                             </div>
                         </Target>
@@ -197,10 +197,10 @@ class OrderingMenu extends React.Component<Props, State> {
                                                     {};
                                                 return (
                                                     <MenuItem key={key} onClick={(event) => {
-                                                        console.log(key + ' clicked');
+                                                        onChangeSortType(key);
                                                         this.handleClose(event);
                                                     }}
-                                                    > {/*TODO add dispatcher*/}
+                                                    >
                                                         <span style={style}>{sortBy[key].longName}</span>
                                                     </MenuItem>);
                                             })};

@@ -4,7 +4,7 @@ import React from 'react'
 import '../../../styles/css/main.css'
 import '../../../styles/css/components/searchbar.css'
 import logo from '../../../static/icons/silo.jpg'
-import SearchBar from "./SearchBar";
+import SearchBarContainer from "./SearchBarContainer";
 
 const Header = ()=>{
     return(
@@ -14,7 +14,7 @@ const Header = ()=>{
                 <div className="title-container">
                     <div className={"pretitle"}>My </div><div className={"title"}>Movie Collection</div>
                 </div>
-                <SearchBar activeLanguage={"it"} filterById={false} />
+                <SearchBarContainer  filterById={false} />
             </div>
         </div>
     )

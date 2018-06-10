@@ -1,6 +1,5 @@
-import LocalizedStrings from 'react-localization';
 
-export const strings = new LocalizedStrings({
+export const localizedStrings = {
     gb: {
         queryPlaceholderID: "Search movie by ID",
         queryPlaceholderTitle: "Search movie by title",
@@ -19,7 +18,15 @@ export const strings = new LocalizedStrings({
         add: "Add new movie",
         edit: "Edit movie",
         tmdbSuggestion: "Select TMDB suggestions for automatic form filling",
-        submit: "Submit"
+        submit: "Submit",
+        usetmdb: "Search on The Movie Database",
+        manual: "Add manually",
+        or: "or",
+        required: "Required field",
+        invalid: "Invalid URL",
+        preview: "Show preview",
+        success: "Movie successfully added",
+        error: "Error"
     },
     it: {
         queryPlaceholderID: "Cerca film per ID",
@@ -39,7 +46,15 @@ export const strings = new LocalizedStrings({
         add: "Aggiungi nuovo film",
         edit: "Modifica film",
         tmdbSuggestion: "Seleziona suggerimenti di TMDB per il riempimento automatico",
-        submit: "Invia"
+        submit: "Invia",
+        usetmdb: "Ricerca su The Movie Database",
+        manual: "Aggiungi manualmente",
+        or: "oppure",
+        required: "Campo obbligatorio",
+        invalid: "URL invalido",
+        preview: "Mostra anteprima",
+        success: "Film aggiunto con successo",
+        error: "Errore"
     },
     fr: {
         queryPlaceholderID: "Rechercez un film par ID",
@@ -59,8 +74,16 @@ export const strings = new LocalizedStrings({
         add: "Ajouter nouveau film",
         edit: "Editer film",
         tmdbSuggestion: "Selectionez les suggestions TMDB pour le remplissage automatique",
-        submit: "Soumettre"
+        submit: "Soumettre",
+        usetmdb: "Recherce dans The Movie Database",
+        manual: "Insérez manuellement",
+        or: "ou",
+        required: "Champ obligatoire",
+        invalid: "URL non valide",
+        preview: "Affiche un aperçu",
+        success: "Film ajouté avec succès",
+        error: "Erreur"
     }
 
-});
+};
 //# sourceMappingURL=strings.js.map

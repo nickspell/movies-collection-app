@@ -1,11 +1,8 @@
 // @flow
 import React from 'react'
-import * as str from "../../localization/strings";
 import Chip from "@material-ui/core/es/Chip/Chip";
 import {createMuiTheme} from "@material-ui/core/styles/index";
-import * as pal from "../../styles/palette";
 import grey from "@material-ui/core/es/colors/grey";
-import orange from "@material-ui/core/es/colors/orange";
 import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
 
 const theme = createMuiTheme({
@@ -21,18 +18,18 @@ const theme = createMuiTheme({
     }
 });
 
-const DetailGenres=({genres}:{genres:[string]})=>{
+const DetailGenres=({genres,genresT}:{genres:[string],genresT:string})=>{
     return(
         <div>
             <div style={{marginTop:10}}>
-                <span className={'titolino'}>{str.strings.genres}</span>
+                <span className={'titolino'}>{genresT}</span>
             </div>
             <div className={'genres'}>
+                <MuiThemeProvider  theme={theme}>
                 {genres.map((genre)=>
-                    <MuiThemeProvider theme={theme}>
-                     <Chip label={genre}/>
-                    </MuiThemeProvider>
+                     <Chip key={genre} label={genre.toUpperCase()}/>
                 )}
+                </MuiThemeProvider>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 import '../../../styles/css/main.css'
 import '../../../styles/css/components/mainpage.css'
 import ToolBar from "./toolbar/ToolBar";
-import MoviesGrid from "./moviesgrid/MoviesGrid";
+import MoviesGridContainer from "./moviesgrid/MoviesGridContainer";
 
 
 
@@ -12,7 +12,7 @@ const MainPage =()=>{
         <div className="backm">
             <div className='wrapper maintweak'>
                 <ToolBar/>
-                <MoviesGrid/>
+                <MoviesGridContainer/>
             </div>
         </div>
     );

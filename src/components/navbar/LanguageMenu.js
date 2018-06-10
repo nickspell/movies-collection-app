@@ -12,7 +12,6 @@ import MenuList from '@material-ui/core/MenuList';
 import classNames from 'classnames';
 import FlagIcon from "./FlagIcon";
 import * as lang from '../../localization/languages'
-import * as str from '../../localization/strings'
 
 
 type Classes={
@@ -23,6 +22,8 @@ type Classes={
 
 type Props={
     classes:Classes,
+    activeLanguage:string,
+    onLanguageChange: Function
 };
 
 type State={
@@ -62,7 +63,7 @@ class LanguageMenu extends React.Component<Props,State>{
     };
 
     render(){
-        const {classes}=this.props;
+        const {classes,activeLanguage,onLanguageChange}=this.props;
         const {open}=this.state;
         const size='lg';
         return(
@@ -79,7 +80,7 @@ class LanguageMenu extends React.Component<Props,State>{
                                 aria-haspopup="true"
                                 onClick={this.handleToggle}
                             >
-                                <FlagIcon code={str.strings.getLanguage()} size={size} />
+                                <FlagIcon code={activeLanguage} size={size} />
                             </Button>
                         </div>
                     </Target>
@@ -96,7 +97,7 @@ class LanguageMenu extends React.Component<Props,State>{
                                         <MenuList role="menu">
                                             {Object.keys(lang.languages).map(key=> {
                                                 return(
-                                            <MenuItem key={key} onClick={(event)=>{console.log(key+' clicked');this.handleClose(event)}}> {/*TODO add dispatcher*/}
+                                            <MenuItem key={key} onClick={(event)=>{onLanguageChange(key);this.handleClose(event)}}>
                                                 <FlagIcon code={key} size={size} />
                                                 <div style={{marginLeft:"10px"}}>{lang.languages[key].name}</div>
                                             </MenuItem>);

@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import * as str from '../../../localization/strings'
 import TextField from "@material-ui/core/es/TextField/TextField";
 import {Field, reduxForm} from "redux-form";
 import '../../../styles/css/components/searchbar.css'
@@ -12,13 +11,7 @@ import InputAdornment from "@material-ui/core/es/InputAdornment/InputAdornment";
 import Button from "@material-ui/core/es/Button/Button";
 import * as pal from '../../../styles/palette'
 
-type Props={
-    filterById:boolean
-}
 
-const breakpoint={
-    xs:400
-};
 
 const theme = createMuiTheme({
     palette:{
@@ -63,23 +56,36 @@ const theme = createMuiTheme({
     }
 });
 
+type Props={
+    filterById:boolean,
+    strings:{[string]:string},
+    onFilterTypeChange:Function
+}
 
-let SearchBar = ({filterById}:Props) => {
 
-    let placeholder = filterById ? str.strings.queryPlaceholderID : str.strings.queryPlaceholderTitle;
+const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
+    <TextField label={label}
+               error={touched && error}
+               {...input}
+               {...custom}
+    />
+);
+
+let SearchBar = ({filterType,strings,onFilterTypeChange}:Props) => {
+    let placeholder = filterType==='mvid'? strings.queryPlaceholderID : strings.queryPlaceholderTitle;
     return (
         <div className={"formcc"}>
             <form>
                 <MuiThemeProvider theme={theme}>
-                    <Field name={"query"} component={TextField} label={placeholder} fullWidth={true}
+                    <Field name={"query"} component={renderTextField} label={placeholder} fullWidth={true}
                            InputProps={{
                                endAdornment:
                                    <InputAdornment position="end">
-                                       <Button variant="raised"  color={filterById?"primary":"secondary"} style={{'marginRight':5}} >
+                                       <Button variant="raised"  onClick={()=>onFilterTypeChange('mvid')} color={filterType==='mvid'?"primary":"secondary"} style={{'marginRight':5}} >
                                            ID
                                        </Button>
-                                       <Button variant="raised"  color={filterById?"secondary":"primary"}>
-                                           {str.strings.titleButton}
+                                       <Button variant="raised"  onClick={()=>onFilterTypeChange('title')} color={filterType==='title'?"primary":"secondary"}>
+                                           {strings.titleButton}
                                        </Button>
                                    </InputAdornment>,
                            }}
