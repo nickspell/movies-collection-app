@@ -21,6 +21,7 @@ export const ADD_MOVIE_FAILURE='ADD_MOVIE_FAILURE';
 export const EDIT_MOVIE_SUCCESS='EDIT_MOVIE_SUCCESS';
 export const EDIT_MOVIE_FAILURE='EDIT_MOVIE_FAILURE';
 export const RESET_DONE='RESET_DONE';
+export const RESET_MOVIE='RESET_MOVIE';
 
 
 
@@ -302,6 +303,14 @@ export const resetDone=()=>(dispatch)=>{
     dispatch(
         {
             type:RESET_DONE
+        }
+    )
+};
+
+export const resetMovie=()=>(dispatch)=>{
+    dispatch(
+        {
+            type:RESET_MOVIE
         }
     )
 };

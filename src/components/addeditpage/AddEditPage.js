@@ -166,9 +166,10 @@ class AddEditPage extends React.Component<Props>{
     componentDidMount() {
         if (this.props.match.params.id)
             this.props.fetchMovieDetails(this.props.match.params.id);
-        else
+        else {
+            this.props.resetMovie();
             this.props.fetchMovies();
-
+        }
     };
 
     setTMDB=(bin)=>{
@@ -261,6 +262,8 @@ class AddEditPage extends React.Component<Props>{
     
     render(){
         const {match,classes, posterURL,trailerURL, handleSubmit, pristine, submitting,strings,isFetching,errorMessage,movie} = this.props;
+
+
 
         if(!match.params.id && !this.state.addChoice){
             return(

@@ -96,6 +96,7 @@
         <item url="file://$PROJECT_DIR$/dist/src/reducers/addEditDone.js" />
         <item url="file://$PROJECT_DIR$/dist/src/reducers/byID.js" />
         <item url="file://$PROJECT_DIR$/dist/src/reducers/deletedMovie.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/reducers/editableMovie.js" />
         <item url="file://$PROJECT_DIR$/dist/src/reducers/errorMessage.js" />
         <item url="file://$PROJECT_DIR$/dist/src/reducers/errorMessageMovieDetails.js" />
         <item url="file://$PROJECT_DIR$/dist/src/reducers/filterType.js" />
@@ -206,6 +207,7 @@
       <root url="file://$PROJECT_DIR$/dist/src/reducers/addEditDone.js" />
       <root url="file://$PROJECT_DIR$/dist/src/reducers/byID.js" />
       <root url="file://$PROJECT_DIR$/dist/src/reducers/deletedMovie.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/reducers/editableMovie.js" />
       <root url="file://$PROJECT_DIR$/dist/src/reducers/errorMessage.js" />
       <root url="file://$PROJECT_DIR$/dist/src/reducers/errorMessageMovieDetails.js" />
       <root url="file://$PROJECT_DIR$/dist/src/reducers/filterType.js" />

@@ -1,4 +1,4 @@
-import {FETCH_MOVIE_DETAILS_SUCCESS, FETCH_MOVIE_TMDB_SUCCESS} from "../actions";
+import {FETCH_MOVIE_DETAILS_SUCCESS, FETCH_MOVIE_TMDB_SUCCESS, RESET_DONE, RESET_MOVIE} from "../actions";
 
 const movieDetails=(state=null,action)=>{
     switch (action.type){
@@ -48,6 +48,8 @@ const movieDetails=(state=null,action)=>{
             }else{
                 return state;
             }
+        case RESET_MOVIE:
+            return null;
         default:
             return state;
     }
