@@ -9,8 +9,10 @@ import OrderingMenuContainer from "./OrderingMenuContainer";
 const ToolBar=()=>{
     return(
         <div className="tool">
-            <OrderingMenuContainer/>
-            <AddButton/>
+            <div className={"minitool"}>
+                    <OrderingMenuContainer/>
+                    <AddButton/>
+            </div>
         </div>
     )
 };
