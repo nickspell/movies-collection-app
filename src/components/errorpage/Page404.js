@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../styles/css/components/error.css'
-import IntegrationAutosuggestContainer from "../addeditpage/IntegrationAutosuggestContainer";
 
 const Page404 =({strings}:{strings:{[string]:string}})=>{
     return(
@@ -9,7 +8,6 @@ const Page404 =({strings}:{strings:{[string]:string}})=>{
                 <div><span className={'text404'}>404</span></div>
                 <div><span className={'texterr'}>{strings.err404}</span></div>
             </div>
-            <IntegrationAutosuggestContainer/>
         </div>
 
     );

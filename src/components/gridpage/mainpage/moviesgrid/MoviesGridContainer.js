@@ -33,11 +33,11 @@ class MoviesGridContainer extends React.Component<Props> {
 
     render() {
         if (this.props.isFetching && !this.props.movies.length) {
-            return <div>Loading</div>
+            return <div style={{minHeight:80}}>Loading</div>
         }
         if (this.props.errorMessage && !this.props.movies.length) {
             console.error(this.props.errorMessage);
-            return <div>Error</div>
+            return <div style={{minHeight:80}}>Error</div>
         }
         return (
             <MoviesGrid movies={this.props.movies} />);
