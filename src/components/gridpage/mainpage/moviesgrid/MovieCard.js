@@ -123,7 +123,7 @@ class MovieCard extends React.Component<Props, State> {
                     </div>
                 </MuiThemeProvider> : null}
 
-            <LazyLoad height={300} offset={200} placeholder={<Placeholder/>}>
+            {/*<LazyLoad height={300} offset={200} placeholder={<Placeholder/>}>*/}
 
                 <div>
 
@@ -180,7 +180,7 @@ class MovieCard extends React.Component<Props, State> {
                     </Link>
                 </div>
 
-            </LazyLoad>
+            {/*</LazyLoad>*/}
             </div>
 
         );
