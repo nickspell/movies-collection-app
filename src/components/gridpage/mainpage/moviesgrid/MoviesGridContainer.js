@@ -72,7 +72,7 @@ const getSortedMovies = (movies, sortBy, order, activeLanguage) => {
     } else {
         return movies.slice().sort((moviea, movieb) => {
             return order ? (parseInt(moviea[sortBy],10) - parseInt(movieb[sortBy],10)) :
-                (parseInt(moviea[sortBy],10) - parseInt(movieb[sortBy],10));
+                (parseInt(movieb[sortBy],10) - parseInt(moviea[sortBy],10));
         })
     }
 };
