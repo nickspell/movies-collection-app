@@ -1,3 +1,4 @@
+//@flow
 import {localizedStrings} from "../../localization/strings";
 import AddEditPage from "./AddEditPage";
 import {connect} from "react-redux";

@@ -1,8 +1,6 @@
 // @flow
 
 import React from 'react'
-import LazyLoad from 'react-lazyload'
-import Placeholder from "./Placeholder";
 import grey from "@material-ui/core/es/colors/grey";
 import '../../../../styles/css/components/movie.css'
 import Paper from "@material-ui/core/es/Paper/Paper";
@@ -28,9 +26,10 @@ type Classes = {
 }
 
 type Movie = {
+    id:number,
     mvid: number, //
     title:{[string]:string},
-    poster: string,
+    poster: {[string]:string},
     rtscore: number,//
     audscore: number,//
     nwoscars: number,//
@@ -65,7 +64,9 @@ const spinnerStyle = {
 
 type Props = {
     movie: Movie,
-    classes: Classes
+    classes: Classes,
+    activeLanguage:string,
+    deleteMovie:Function,
 }
 type State = {
     open: boolean,

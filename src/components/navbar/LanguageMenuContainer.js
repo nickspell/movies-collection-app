@@ -1,3 +1,4 @@
+//@flow
 import {setLanguage} from '../../actions/index'
 import {connect} from "react-redux";
 import LanguageMenu from "./LanguageMenu";

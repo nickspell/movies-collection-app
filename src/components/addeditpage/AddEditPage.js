@@ -73,23 +73,21 @@ const theme = createMuiTheme({
         }
     }
 });
-type Props = {
-    match: {
-        params: {
-            id?: number
-        }
-    },
-    classes: {
-        root: { [string]: string }
-    }
-} & FormProps;
 
-const renderTextField = ({ input,errText, label, meta: { touched, error }, ...custom }) => (
+type rtfTypes={
+    input:{},
+    errText:string,
+    label:string,
+    meta:{
+        touched:boolean,
+        error:boolean,
+    },
+    custom:any
+};
+
+const renderTextField = ({ input,errText, label, meta: { touched, error }, ...custom }:rtfTypes):any => (
     <TextField label={label}
                error={touched && error}
-               // FormHelperTextProps={{
-               //     error:true
-               // }}
                helperText={touched && error?errText:''}
                {...input}
                {...custom}
@@ -99,18 +97,8 @@ const renderTextField = ({ input,errText, label, meta: { touched, error }, ...cu
     />
 );
 
-// const renderChips=({ input, label, meta: { touched, error }, ...custom }) => (
-//     <ChipInput label={label}
-//                error={touched && error}
-//                {...input}
-//                {...custom}
-//                onKeyPress={e => {
-//                    if (e.key === 'Enter') e.preventDefault();
-//                }}
-//     />
-// );
 
-const renderChips = ({input, hintText, floatingLabelText,disabled}) => (
+const renderChips = ({input, hintText, floatingLabelText,disabled}):any => (
     <ChipInput
         {...input}
         value = { input.value || []}
@@ -151,11 +139,27 @@ const validate = values => {
     return errors;
 };
 
+type Props = {
+    match: {
+        params: {
+            id?: number
+        }
+    },
+    classes: {
+        root: { [string]: string }
+    }
+} & FormProps;
+
+type State={
+    addChoice:boolean,
+    useTMDB:boolean,
+    previewPoster:boolean
+}
 
 
 
 
-class AddEditPage extends React.Component<Props>{
+class AddEditPage extends React.Component<Props,State>{
 
     state={
         addChoice:false,
@@ -261,7 +265,7 @@ class AddEditPage extends React.Component<Props>{
     };
     
     render(){
-        const {match,classes, posterURL,trailerURL, handleSubmit, pristine, submitting,strings,isFetching,errorMessage,movie} = this.props;
+        const {match,classes, posterURL,trailerURL, handleSubmit, submitting,strings,isFetching,errorMessage,movie} = this.props;
 
 
 

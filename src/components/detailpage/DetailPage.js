@@ -17,23 +17,6 @@ import DetailPersonalInfo from "./DetailPersonalInfo";
 import {Redirect} from "react-router-dom";
 
 
-type Classes = {
-    root: {[string]:string},
-    rootSmall: {[string]:string},
-}
-
-type Props = {
-    match: {
-        params: {
-            id: number
-        }
-    },
-    classes: Classes;
-    activeLanguage:string;
-    strings:{[string]:string}
-}
-
-
 const styles = () => ({
     root: {
         backgroundColor: grey[800],
@@ -59,7 +42,7 @@ const styles = () => ({
 type Movie = {
     id: number, //
     title: {[string]:string},
-    poster: string,
+    poster: {[string]:string},
     rtscore: number,//
     audscore: number,//
     nnoscars: number,//
@@ -70,7 +53,7 @@ type Movie = {
     duration: number,//
     resolution: string,
     hd: string,
-    trailer: string,
+    trailer: {[string]:string},
     catchy:{[string]:string},
     description:{[string]:string},
     genres:{[string]:[string]},
@@ -100,8 +83,23 @@ const AdditionalContent = ({movie,color,lang,strings}: { movie: Movie,color:stri
         )
 };
 
+type Props={
+    fetchMovieDetails:Function,
+    classes:{[string]:string},
+    strings:{[string]:string},
+    activeLanguage:string,
+    movie:Movie,
+    isFetching:boolean,
+    errorMessage:string,
+    match:{
+        params:{
+            id:number
+        }
+    }
+}
 
-class DetailPage extends React.Component{
+
+class DetailPage extends React.Component<Props>{
 
 
     componentDidMount(){
@@ -154,7 +152,7 @@ class DetailPage extends React.Component{
                     </div>
                 </div>
                 <MediaQuery query="(max-width: 800px)">
-                    <AdditionalContent movie={movie} color={grey[800]} strings={strings}/>
+                    <AdditionalContent movie={movie} color={grey[800]} strings={strings} lang={activeLanguage}/>
                 </MediaQuery>
             </div>)
     }

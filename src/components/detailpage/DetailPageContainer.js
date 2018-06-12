@@ -1,3 +1,4 @@
+//@flow
 import {localizedStrings} from "../../localization/strings";
 import {connect} from "react-redux";
 import DetailPage from "./DetailPage";

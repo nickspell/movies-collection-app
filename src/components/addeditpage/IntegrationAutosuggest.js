@@ -10,7 +10,6 @@ import { withStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import * as db from '../../remote'
 import * as langs from '../../localization/languages'
-import {Redirect} from "react-router-dom";
 
 
 
@@ -93,7 +92,23 @@ const styles = theme => ({
 
 
 
-class IntegrationAutosuggest extends React.Component {
+type Props={
+    classes:{[string]:string},
+    helperText:string,
+    label:string,
+    activeLanguage:string,
+    onSelect:Function,
+    fetchTMDB:Function,
+}
+
+type State={
+    suggestion_selected:{[string]:string},
+    value:string,
+    suggestions:[]
+}
+
+
+class IntegrationAutosuggest extends React.Component<Props,State> {
     state = {
         suggestion_selected:{},
         value: '',

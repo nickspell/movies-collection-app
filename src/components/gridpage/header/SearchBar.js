@@ -57,13 +57,13 @@ const theme = createMuiTheme({
 });
 
 type Props={
-    filterById:boolean,
     strings:{[string]:string},
-    onFilterTypeChange:Function
+    onFilterTypeChange:Function,
+    filterType:string
 }
 
 
-const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
+const renderTextField = ({ input, label, meta: { touched, error }, ...custom }):any => (
     <TextField label={label}
                error={touched && error}
                {...input}

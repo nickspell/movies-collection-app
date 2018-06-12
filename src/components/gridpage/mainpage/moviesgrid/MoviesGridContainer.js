@@ -12,7 +12,8 @@ type Props = {
     fetchMovies: Function,
     isFetching: boolean,
     movies: [any],
-    errorMessage: string
+    errorMessage: string,
+    deletedMovie:boolean,
 }
 
 class MoviesGridContainer extends React.Component<Props> {

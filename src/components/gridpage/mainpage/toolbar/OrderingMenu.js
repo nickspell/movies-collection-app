@@ -30,7 +30,9 @@ type Props = {
     classes: Classes,
     selectedSort: string,
     ascending: boolean,
-    strings:{[string]:string}
+    strings:{[string]:string},
+    onChangeSortType:Function,
+    onToggleOrder:Function,
 };
 
 type State = {
